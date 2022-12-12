@@ -1,0 +1,78 @@
+@import '_variables.scss';
+
+.splash { }
+
+.splash .splash-image {
+    background: #fff;
+    height: 100%;
+    // background-image: url('../../img/splash.jpg');
+    background-size: cover;
+    background-position: center center;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.splash .splash-image:after {
+    background: $custom-theme-dark-blue;
+    opacity: .5;
+    position: absolute;
+    content: '';
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: 16px;
+    z-index: 5;
+}
+
+.splash .splash-image .caption {
+    background: #fff;
+    padding: 20px 30px 20px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 12px 0 0;
+    border-top: 8px solid #e6be8d;
+    max-width: 50%;
+    display: inline-block;
+    text-align: left;
+    z-index: 100;
+}
+
+.splash .splash-image .caption h2 {
+    margin-bottom: 14px;
+}
+
+.news .post-title {
+
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.news .featured .post-title {
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.news .post-categories, .caption .post-categories {
+    font-family: Gotham;
+    font-weight: 500;
+    font-size: 11px;
+    color: #0064bc;
+    letter-spacing: 0.02rem;
+    text-transform: uppercase;
+}
+
+.news .post-categories .separator, .caption .post-categories .separator {
+    padding: 0 3px;
+    display: inline-block;
+}
+
+.news .post-categories a, .caption .post-categories a {
+    color: #0064bc;
+}
+
+.initiatives h3 { font-size: 18px; font-family: Gotham; font-weight: 500; }
+
+
+.news .social { border-radius: 16px; }
+
+.news .social h3 { font-size: 13px; letter-spacing: 0.08rem; text-transform: uppercase; font-weight: bold; }

@@ -1,0 +1,224 @@
+@import "_custom.scss";
+@import "~bootstrap/scss/bootstrap";
+
+:root {
+    --font-family-serif: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif;
+}
+
+html { height: 100%; min-height: 100%; }
+body { height: 100%; min-height: 100%; }
+
+#page {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    padding-top: 90px;
+}
+
+.home #page {
+    padding-top: 0;
+}
+
+.site-header {
+    // flex: 0 0 auto;
+}
+
+main {
+
+    flex: 1 1 auto;
+}
+
+a { color: $custom-theme-dark-blue; }
+
+footer { flex: 0 0 auto; }
+
+.site-header {
+    position: relative;
+    padding: 13px 0;
+    transition: all 0.2s;
+}
+
+.site-header .title {}
+
+.site-header .title a {
+    display: block;
+    text-decoration: none;
+    font-family: var(--font-family-serif);
+    transition: all 0.2s;
+}
+
+.site-header .title a:hover h1, .site-header .title a:hover h2 {
+    color: $custom-theme-dark-red;
+}
+
+
+.site-header .title h1 {
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.site-header .title h1 span {
+    font-style: italic;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 1rem;
+}
+
+.site-header .title h2 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    font-weight: bold;
+}
+
+.site-header .center-logo {
+        transition: all 0.15s;
+        height: 75px;
+    position: absolute;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
+}
+
+.home .site-header .center-logo {
+    height: 110px;
+}
+
+.site-header .center-logo a {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.site-header .center-logo img {
+    display: block;
+    max-height: 100%;
+    width: auto;
+    // width: 90px;
+    // height: 90px;
+    // background: red;
+    // position: absolute;
+    // left: 50%;
+    // display: block;
+    // transform: translateX(-50%);
+}
+
+.site-header .center-logo a:hover {
+    transform: scale(1.05);
+}
+
+.site-header .nav-item {}
+
+.site-header .nav-item a {
+    font-size: 14px;
+    padding-bottom: 3px;
+    word-break: keep-all;
+    transition: 0.2s ease;
+    text-decoration: none;
+    color: $custom-theme-dark-blue;
+    border-bottom: 1px solid rgba(10,36,88,.25);
+}
+
+
+.site-header.scrolled {
+    padding: 8px 0;
+}
+
+.home .site-header.scrolled .center-logo {
+
+    height: 75px;
+}
+
+
+
+
+
+
+
+
+h2 { font-family: var(--font-family-serif); font-weight: bold; font-variant: small-caps; }
+
+h3 { font-family: var(--font-family-serif); font-weight: normal; font-variant: normal; }
+
+
+
+
+footer .logo {
+height: 75px;
+display: inline-block;
+}
+
+footer .logo a {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+
+footer .logo img {
+    display: block;
+    max-height: 100%;
+    width: auto;
+    // width: 90px;
+    // height: 90px;
+    // background: red;
+    // position: absolute;
+    // left: 50%;
+    // display: block;
+    // transform: translateX(-50%);
+}
+
+
+footer nav ul {
+    column-count: 2;
+-moz-column-gap: 60px;
+column-gap: 60px;
+min-width: 45%;
+list-style: none;
+
+    margin: 0; padding: 0;
+
+
+
+}
+
+footer nav ul li {
+margin: 5px 0px 0px 0px;
+}
+
+footer nav ul li a {
+    padding: 3px;
+}
+
+
+.plain_cta {
+    border-left: 3px solid #a06454;
+    padding: 5px 4px 5px 14px;
+    font-size: 14px;
+    display: block;
+    font-family: Gotham;
+    font-weight: 500;
+
+}
+
+
+// http://www.focus97.com/blog/web-design-and-development/wordpress-nav-solved-how-to-list-child-pages-only-for-current-parent-page/
+
+
+
+.children { display: none; }
+
+.current_page_item .children,
+
+.current_page_ancestor .children,
+
+.current_page_parent .children
+
+{ display: block; }
